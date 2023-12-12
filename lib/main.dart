@@ -1,11 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'Screens/home_screen.dart';
 
-
-
-void main(){
+void main() {
   runApp(MyApp());
 }
 

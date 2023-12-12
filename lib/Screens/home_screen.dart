@@ -7,20 +7,30 @@ class HomeScreen extends StatefulWidget {
     // TODO: implement createState
     return HomeScreenUI();
   }
-
 }
 
 class HomeScreenUI extends State<HomeScreen> {
+  int countNumber=0;
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(
-      appBar: AppBar(title: Text("Home"),),
+      appBar: AppBar(title: Text('Counter App'),),
       body: Center(
-        child: Text("Counting Number"),
+        child: Text(countNumber.toString()),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () {  }, child: Icon(Icons.add),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: (){
 
+          setState((){
+            countNumber=countNumber+1;
+          });
+
+
+        },
       ),
     );
-  }}
+  }
+
+}
